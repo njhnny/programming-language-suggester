@@ -1,3 +1,9 @@
+function blink_text() {
+  $('.blink').fadeOut(150);
+  $('.blink').fadeIn(300);
+}
+setInterval(blink_text, 1500);
+
 $(document).ready(function() {
   $("form#suggester").submit(function(event) {
     event.preventDefault();
@@ -44,8 +50,12 @@ $(document).ready(function() {
       $('#python').show();
     } else if (languageC >= languageA && languageC >= languageB) {
       $('#javascript').show();
-    } 
-    
-    
+    }  
   });
+});
+
+$("btn").click(function() {
+  $('html,body').animate({
+      scrollBottom: $("#result").offset().bottom},
+      'slow');
 });
