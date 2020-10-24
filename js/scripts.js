@@ -50,12 +50,9 @@ $(document).ready(function() {
       $('#python').show();
     } else if (languageC >= languageA && languageC >= languageB) {
       $('#javascript').show();
-    }  
+    } 
+
+    $(document).scrollTop($(document).height());
   });
 });
 
-$("btn").click(function() {
-  $('html,body').animate({
-      scrollBottom: $("#result").offset().bottom},
-      'slow');
-});
